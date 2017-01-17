@@ -66,7 +66,7 @@ def main():
 
 	html = html_header + html_body + html_footer
 
-	html_file = open('casual_carpool.html', 'w')
+	html_file = open('../../vicmora.github.io/casual_carpool.html', 'w')
 	html_file.write(html)
 	html_file.close()
 

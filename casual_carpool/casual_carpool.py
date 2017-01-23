@@ -4,6 +4,8 @@ import datetime
 import calendar
 import pandas as pd
 import warnings
+import os
+# import git
 from datetime import date
 pd.set_option('display.float_format', lambda x: '%.2f' % x)
 warnings.filterwarnings('ignore')
@@ -38,6 +40,11 @@ def format_df(df, day):
 
 	return html_body
 
+def update():
+	os.system("git add ../../vicmora.github.io/casual_carpool.html")
+	os.system('git commit -m "daily update"')
+	os.system('git push origin master')
+
 def main():
 	html_body = ""
 	weekday = calendar.day_name[date.today().weekday()]
@@ -69,6 +76,8 @@ def main():
 	html_file = open('../../vicmora.github.io/casual_carpool.html', 'w')
 	html_file.write(html)
 	html_file.close()
+
+	update()
 
 	# print(weekday+' Average')
 	# format_df(today_df)

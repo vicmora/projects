@@ -1,5 +1,6 @@
 casual_carpool/.ipynb_checkpoints/
 casual_carpool/.DS_Store
+casual_carpool/get_google_sheet.py
 hackernews_scrapy/.DS_Store
 nyt_api/.DS_Store
 stocktwits_api/.DS_Store
